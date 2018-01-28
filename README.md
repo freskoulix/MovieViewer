@@ -3,7 +3,7 @@
 ## Summary
 An Angular 5 web interface for the most popular movies from ["The Movie database"](https://www.themoviedb.org) [API](https://developers.themoviedb.org/4/getting-started/authorization).
 
-![Movie Viewer]()
+![Movie Viewer](https://raw.githubusercontent.com/tsiknas/MovieViewer/master/MovieViewer.jpg)
 
 ## System Dependencies
 - Node.js version 8 LTS (current is: 8.9.4)
