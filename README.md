@@ -1,27 +1,34 @@
-# Ng2MovieViewer
+# Movie Viewer
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+## Summary
+An Angular 5 web interface for the most popular movies from ["The Movie database"](https://www.themoviedb.org) [API](https://developers.themoviedb.org/4/getting-started/authorization).
 
-## Development server
+![Movie Viewer]()
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## System Dependencies
+- Node.js version 8 LTS (current is: 8.9.4)
+- npm version 5 (current is: 5.6.0)
 
-## Code scaffolding
+## Node modules
+Run: `npm install`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Development Run
+Run: `npm start` for a development version of the site.
+You can then reach it at: [http://localhost:4200/](http://localhost:4200/)
+
+##### But it is better if you build the project first and then run the server.
 
 ## Build
+Run `npm run build`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+## Production Run
+After build
+Run `npm run server`
+Reach again at: [http://localhost:4200/](http://localhost:4200/)
 
-## Running unit tests
+## Test
+### Lint
+Run `npm run lint`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### e2e
+Run `npm run server` and on an other terminal run `npm run e2e`
