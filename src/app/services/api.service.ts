@@ -9,20 +9,7 @@ export default class ApiService {
   constructor(private http: Http) {}
 
   /**
-   *
-   */
-  mostPopular(page) {
-    let url = ApiService.generateApiUrl(page);
-
-    return this.api(url).then((response) => {
-      return Promise.resolve(response);
-    }).catch((error) => {
-      return Promise.reject(error);
-    });
-  }
-
-  /**
-   *
+   * Generates a URL for a given API page
    */
   private static generateApiUrl(page) {
     return configApi.URL.BASE
@@ -34,9 +21,22 @@ export default class ApiService {
   }
 
   /**
-   *
+   * Makes a GET request into url
    */
   private api(url: string) {
     return this.http.get(url).toPromise();
+  }
+
+  /**
+   * Fetches most popular movies on a given page
+   */
+  mostPopular(page) {
+    const url = ApiService.generateApiUrl(page);
+
+    return this.api(url).then((response) => {
+      return Promise.resolve(response);
+    }).catch((error) => {
+      return Promise.reject(error);
+    });
   }
 }

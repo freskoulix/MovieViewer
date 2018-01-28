@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
-import { configApi } from '../../config/api'
+import { configApi } from '../../config/api';
 
 import * as $ from 'jquery';
 
 
 @Component({
-  selector: 'movie-info',
+  selector: 'app-movie-info',
   templateUrl: './movieInfo.component.pug',
   styleUrls: ['./movieInfo.component.styl']
 })
@@ -20,7 +20,7 @@ export class MovieInfoComponent {
   constructor() {}
 
   movieImageClickHandler(event) {
-    let $target = $(event.target).closest('.movie-image-container');
+    const $target = $(event.target).closest('.movie-image-container');
 
     if ($target.hasClass('big')) {
       this.movieImageClickOperation = 'enlarge';

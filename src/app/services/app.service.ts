@@ -8,11 +8,11 @@ export default class AppService {
   constructor(private apiService: ApiService) {}
 
   /**
-   *
+   * Fetches most popular movies and resolves its response
    */
   mostPopular(page) {
     return this.apiService.mostPopular(page).then((response) => {
-      let body = this.parseApiResponse(response);
+      const body = this.parseApiResponse(response);
       return Promise.resolve(body);
     }).catch((error) => {
       return Promise.reject(error);
@@ -20,7 +20,7 @@ export default class AppService {
   }
 
   /**
-   *
+   * Tries to parse an API response, returns null in case of failure
    */
   parseApiResponse(response: object) {
     let body = null;

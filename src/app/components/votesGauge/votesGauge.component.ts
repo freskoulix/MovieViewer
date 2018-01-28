@@ -2,12 +2,12 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 
 @Component({
-  selector: 'votes-gauge',
+  selector: 'app-votes-gauge',
   templateUrl: './votesGauge.component.pug',
   styleUrls: ['./votesGauge.component.styl']
 })
 export class VotesGaugeComponent implements OnChanges {
-  @Input() voteAverage: number = 0;
+  @Input() voteAverage = 0;
 
   state: any = [];
 
@@ -24,9 +24,9 @@ export class VotesGaugeComponent implements OnChanges {
       return;
     }
 
-    let value = changes.voteAverage.currentValue;
-    let mappedValue = value / this.mapDelimiter;
-    let integerPart = Math.floor(mappedValue);
+    const value = changes.voteAverage.currentValue;
+    const mappedValue = value / this.mapDelimiter;
+    const integerPart = Math.floor(mappedValue);
     let decimalPart = mappedValue - integerPart;
 
     for (let i = 0; i < this.starsNumber; i++) {

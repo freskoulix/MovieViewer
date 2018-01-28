@@ -1,7 +1,7 @@
 .movies-list-container
   .movie-container(*ngFor='let movie of state.results')
     a.movie-button(href='#movie-{{ movie.id }}' data-toggle='collapse' aria-expanded='false' attr.aria-controls='movie-{{ movie.id }}')
-      h4 {{ movie.title }} <votes-gauge [voteAverage]='movie.voteAverage'></votes-gauge>
+      h4 {{ movie.title }} <app-votes-gauge [voteAverage]='movie.voteAverage'></app-votes-gauge>
 
     .movie-row.collapse(id="movie-{{ movie.id }}")
-      <movie-info [state]='movie'></movie-info>
+      <app-movie-info [state]='movie'></app-movie-info>

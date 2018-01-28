@@ -76,16 +76,16 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.state.page = response.page;
     this.state.totalPages = response.totalPages;
     this.state.totalResults = response.totalResults;
-    let results = this.convertResults(response.results);
+    const results = this.convertResults(response.results);
     this.state.results = this.state.results.concat(results);
   }
 
   convertResults(results: any) {
     return _.map(results, (o) => {
-      let keys = Object.keys(o);
-      let out = {};
+      const keys = Object.keys(o);
+      const out = {};
       keys.forEach((key) => {
-        let camelCaseKey = _.camelCase(key);
+        const camelCaseKey = _.camelCase(key);
         out[camelCaseKey] = o[key];
       });
       return out;

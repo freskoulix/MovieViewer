@@ -5,7 +5,7 @@ import 'bootstrap';
 
 
 @Component({
-  selector: 'movies-list',
+  selector: 'app-movies-list',
   templateUrl: './moviesList.component.pug',
   styleUrls: ['./moviesList.component.styl']
 })
