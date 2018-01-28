@@ -1,0 +1,3 @@
+span.votes-gauge-container(title='Rating: {{ voteAverage }} / 10')
+  span.movie-rating-star(*ngFor='let star of state')
+    i(class='fa {{ star }}' aria-hidden='true')

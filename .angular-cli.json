@@ -1,7 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng2-movie-viewer"
+    "name": "ng2-movie-viewer",
+    "ejected": true
   },
   "apps": [{
     "root": "src",
@@ -20,7 +21,11 @@
     "styles": [
       "styles.styl"
     ],
-    "scripts": [],
+    "scripts": [
+      "../node_modules/jquery/dist/jquery.min.js",
+      "../node_modules/popper.js/dist/popper.min.js",
+      "../node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ],
     "environmentSource": "environments/environment.ts",
     "environments": {
       "dev": "environments/environment.ts",

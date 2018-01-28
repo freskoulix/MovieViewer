@@ -1,0 +1,15 @@
+header
+  h1 {{ title }}
+  hr
+  .seperator
+
+.container
+  .row
+    .col-md-8.offset-md-2.movies-list-wrapper
+      <movies-list [state]="state"></movies-list>
+
+  .row
+    .col-md-8.offset-md-2
+      a.load-more-movies.btn.btn-secondary.disabled(href='javascript:void(0)')
+        i.load-more-movies-spinner.fa.fa-spin.fa-circle-o-notch.hidden(aria-hidden='true')
+        span.load-more-movies-text Load more

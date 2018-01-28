@@ -1,0 +1,19 @@
+.movie-image-container
+  .movie-image-overlay((click)='movieImageClickHandler($event)')
+    i.fa.fa-search(aria-hidden='true')
+    .movie-image-overlay-description Click to {{ movieImageClickOperation }}
+  img.movie-image(src='{{ baseUrl + state.posterPath }}')
+.movie-info-container
+  .movie-info
+    span.movie-info-image(*ngIf='state.video else movieInfoImageElseBlock' title='TV show')
+      i.fa.fa-television(aria-hidden='false')
+    <ng-template #movieInfoImageElseBlock>
+      span.movie-info-image(title='Film')
+        i.fa.fa-film(aria-hidden='false')
+    </ng-template>
+    img.movie-info-image(*ngIf='state.adult' src='./assets/plus-18-movie.svg')
+    span.movie-info-col <em>Original title:</em> "{{ state.originalTitle }}" |
+    span.movie-info-col <em>Released:</em> {{ state.releaseDate }} |
+    span.movie-info-col <em>Language:</em> {{ state.originalLanguage }}
+  .movie-info
+    div {{ state.overview }}
