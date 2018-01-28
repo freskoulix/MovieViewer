@@ -32,4 +32,6 @@ Reach again at: [http://localhost:4200/](http://localhost:4200/)
 Run `npm run lint`
 
 ### e2e
+After build
+
 Run `npm run server` and on an other terminal run `npm run e2e`
